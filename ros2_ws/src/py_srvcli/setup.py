@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'py_pubsub'
+package_name = 'py_srvcli'
 
 setup(
     name=package_name,
@@ -15,13 +15,13 @@ setup(
     zip_safe=True,
     maintainer='karol',
     maintainer_email='pitera.karol@gmail.com',
-    description='Examples of minimal publisher/subscriber using rclpy',
+    description='Python client server tutorial',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = py_pubsub.publisher_member_function:main',
-            'listener = py_pubsub.subscriber_member_function:main',
+            'service = py_srvcli.service_member_function:main',
+            'client = py_srvcli.client_member_function:main',
         ],
     },
 )
